@@ -93,6 +93,8 @@ def getRoutesDj(acc, currExplored, lens):
             if not str(coord) in currExplored:
                 newAcc.append(path + [coord])
                 currExplored.add(str(coord))
+    if len(newAcc) == 0:
+        return
     getRoutesDj(newAcc, currExplored, lens)
 
 
